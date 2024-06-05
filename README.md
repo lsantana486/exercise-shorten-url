@@ -16,7 +16,23 @@ poetry install
 poetry run short-url-cli --urls-file ./examples/urls.txt
 ```
 
-## Ejecucion en contenedor
+## Ejecucion en contenedor (Docker)
+- Construir imagen
+```shell
+# Standard
+docker build --tag short-url-cli:v$(poetry version -s) -f container/Containerfile .
+
+# Minimal
+docker build --tag short-url-cli:v$(poetry version -s) -f container/alpine.Containerfile .
+```
+
+- Ejecutar contenedor con imagen construida
+```shell
+docker run -it --rm -v $(pwd)/examples:/tmp short-url-cli:v$(poetry version -s) --urls-file /tmp/urls.txt
+```
+
+
+## Ejecucion en contenedor (Podman)
 - Construir imagen
 ```shell
 # Standard
