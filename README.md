@@ -2,7 +2,7 @@
 
 ## Pre requisitos
 - Instalar [Podman](https://podman.io/getting-started/installation.html) ejecutor de contenedores daemonless (misma interfaz que docker)
-- Poetry [link](https://python-poetry.org/docs/#installation)
+- Instalar Poetry [link](https://python-poetry.org/docs/#installation) manejador de dependencias y entornos virtuales
 
 
 ## Ejecucion local
